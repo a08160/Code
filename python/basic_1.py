@@ -68,6 +68,16 @@ print(b_num)
 print(h_num)
 
 print(bin(10)) # 10 to 2
-print(bin(65))
+print(type(bin(65))) # 문자열
 print(hex(10)) # 10 to 16
-print(hex(65))
+print(type(hex(65))) # 문자열
+
+# 아스키 코드 / 유니코드 변환
+# 문자들을 2진수로 풀이하기 위해 약속한 코드값
+# 유니코드는 아스키코드의 확장판
+
+print(ord('0')) # 원래 문자로 변환환
+print(ord('A'))
+print(chr(48)) # 아스키 코드로 변환
+print(chr(65)) 
+
