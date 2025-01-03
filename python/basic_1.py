@@ -36,3 +36,38 @@ print(ive)
 # f 문자열 포맷팅
 print(f'제가 좋아하는 가수는 {ive}입니다.')
 print('제가 좋아하는 가수는 ',ive,"입니다.",sep="")
+
+print(type(77)) # 정수 타입
+print(type(77.2)) # 실수 타입
+
+# 이스케이프 문자 \: 원래 문자의 역할을 벗어나게 함
+print("\'안녕하세요")
+print("\"안녕하세요")
+
+a=77
+print(type(a))
+a=7.2
+print(type(a))
+
+print('111\n1111') # \n 줄바꿈
+print('111\t1111') # \t tab(8칸)
+
+
+# 실습2 개를 만드시오
+print('''|\\_/|
+|q p|\t/}
+( ʘ )"""\\
+|"^"`\t |
+||_/=\\\\__|''')
+
+num = 10
+b_num = 0b1010
+h_num = 0xA
+print(num)
+print(b_num)
+print(h_num)
+
+print(bin(10)) # 10 to 2
+print(bin(65))
+print(hex(10)) # 10 to 16
+print(hex(65))
