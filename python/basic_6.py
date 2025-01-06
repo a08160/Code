@@ -9,3 +9,13 @@ t3 = 1,2,3
 
 t4 = ("a","b","c",("안녕","감자")) # 튜플 안에 튜플 자료형 가능
 print(t4)
+
+print(t1[0])
+print(t2.count(3))
+print(t3.index(2))
+print(t4[3][0])
+
+print("d" in t4) # False
+print("a" in t4) # True
+
+# t4[0] = 2 : Error - 수정 불가

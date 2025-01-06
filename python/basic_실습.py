@@ -10,3 +10,11 @@ born = int(input("태어난 년도를 입력하세요."))
 year = int(input("올해 년도를 입력하세요."))
 print(f"올해는{year}년,{name}님의 나이는{year-born+1}세 입니다") # f열 포맷팅 사용
 print("올해는"+str(year)+"년,"+name+"님의 나이는"+str(year-born+1)+"세 입니다") # f열 포맷팅 사용 X
+
+# dictionary 실습
+score = {}
+score.update({"Alice":85,"Bob":90,"Charlie":95})
+score.update({"David":80})
+score["Alice"] = 88
+del score["Bob"]
+print(score)
