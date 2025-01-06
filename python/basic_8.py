@@ -58,3 +58,31 @@ del score["Bob"]
 print(score)
 
 # 내장 함수 
+
+# sum: 숫자 시퀀스의 모든 요소의 합을 반환
+# 시퀀스: 문자열, 리스트, 튜플, range()
+# max / min 
+# len()
+# zip(): 여러 시퀀스를 병렬로 묶어줌 
+
+names = ["Alice","Bob","Charlie"]
+scores = [85,90,95]
+zipped = list(zip(names, scores)) # zip 만 사용 시 zip 객체로서 원소가 보이지 않음 => list() / dict() 등으로 자료형 변환을 해야함
+print(zipped)
+
+scores ={"국어":85, "수학":90, "영어":95}
+print(sum(scores.values()))
+print(min(scores.values()))
+print(max(scores.values()))
+
+names = ["Alice","Bob","Charlie"]
+scores = [85,90,95]
+
+name_score = list(zip(names,scores))
+print(name_score)
+
+names1 = ["Alice","Bob","Charlie","Lilly"]
+scores1 = [85,90,95]
+
+name_score = list(zip(names1,scores1)) # 원소의 병렬 형태가 맞지 않을 경우, 비어있는 zip 원소를 버림
+print(name_score)
