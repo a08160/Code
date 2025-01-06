@@ -1,3 +1,4 @@
+"""
 # 이차원 리스트 (행렬)
 matrix = [
     [1,2,3],
@@ -36,3 +37,17 @@ matrix.append([10,11,12]) # [10,11,12] 의 행을 추가
 matrix[1].insert(1,100)
 matrix.insert(2, ["안녕","반가워","어서와"]) # 행 삽입
 matrix[0].extend([11,22])
+"""
+# Quiz 3차원 리스트에서 인덱싱을 이용해 아이스크림 문자열 만들기
+words = [
+    [["마", "크"], ["구", "이"]],
+    [["피", "아"], ["림", "차"]],
+    [["스", "사"], ["나", "가"]]
+]
+print(words[1][0][1]+words[0][1][1]+words[2][0][0]+words[0][0][1]+words[1][1][0])   
+
+# 3차원 리스트의 인덱스를 출력
+for i, layer in enumerate(words):          # 첫 번째 차원
+    for j, row in enumerate(layer):        # 두 번째 차원
+        for k, element in enumerate(row):  # 세 번째 차원
+            print(f"Element: {element}, Index: ({i}, {j}, {k})")
