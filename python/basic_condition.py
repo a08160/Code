@@ -60,3 +60,27 @@ print(id(a), print(b))
 a = [1,2,3,4]
 b = a.copy()
 print(id(a), id(b))
+
+# 삼항연산자
+# 조건문을 한줄로 줄여 쓰는 방법
+# 간단한 조건을 처리할 때 주로 사용
+# 참일 때의 값 if 조건 else 거짓일 때의 값
+
+age = int(input("나이를 입력해주세요: "))
+message = "성인" if age >= 20 else "미성년자"
+print(message)
+
+# 중첩 조건문
+
+is_login = True
+role = "admin"
+if is_login:
+    print("로그인 상태입니다")
+    if role == "admin":
+        print("관리자 권한을 갖습니다")
+    elif role == "editor":
+        print("편집자 권한을 갖습니다")
+    else:
+        print("일반 사용자입니다.")
+else:
+    print("로그인이 필요합니다")
