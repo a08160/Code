@@ -69,3 +69,9 @@ for row in matrix2:
 # VS code 단축키: ctrl + d
 # 현재 블럭잡힌 단어와 동일한 단어를 블럭 잡아준다. 2번 누르면 뒤의 2개까지 블럭 잡아줌. 같이 수정 가능
 
+# 실습. 이중for문 구구단 만들기(2단부터 9단 출력)
+
+for i in range(2,10):
+    print(f"[{i}단]")
+    for j in range(1,10):
+        print(f"%d x %d = %d"%(i,j,i*j),end = "\n")
