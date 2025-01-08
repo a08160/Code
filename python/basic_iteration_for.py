@@ -43,5 +43,29 @@ print()
 
 # key, value 동시 출력
 for key, value in my_dic.items():
-    print(f"{key}, {value}", end = " ")
+    print(f"{key}, {value}", end = "|")
 print()
+
+# 이중 For 문
+# 외부 반복문 / 내부 반복문
+# 리스트 내포: 리스트 안에 for 문 사용
+# 표현식 for 요소 in 시퀀스 (if 조건)
+
+matrix2 = [
+   [4,21,67],
+    [99,20,12],
+    [23,59,12]
+]
+
+# 원소의 합계 계산
+for row in matrix2:
+    # print(f"외부반복문의 row: {row}")
+
+    for elem in row:
+        # print(f"내부반복문의 elem: {elem}")
+        if elem%2 == 0:
+            print(elem, end = "\n")
+
+# VS code 단축키: ctrl + d
+# 현재 블럭잡힌 단어와 동일한 단어를 블럭 잡아준다. 2번 누르면 뒤의 2개까지 블럭 잡아줌. 같이 수정 가능
+
