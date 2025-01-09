@@ -83,4 +83,77 @@ def program1(x,y):
 def program2(product,cost):
     print(f"{product} 가격: {cost+2500}원" if cost < 20000 else f"{product} 가격: {cost}원")
 
-# 실습3
+
+
+# 내장 함수
+'''
+abs(x) # 절댓값 내장 함수
+pow(x,y) # x^y 거듭제곱 내장 함수
+map(function, 반복 가능한 객체) # 리스트의 각 요소에 주어진 함수를 적용하여 새로운 리스트를 반환
+filter(함수, 반복가능한 객체) # 리스트에서 주어진 조건을 만족하는 요소만 필터링하여 반환
+							# 튜플 사용 시 key 값에 대해 함수 적용. 함수나 객체 값 수정 필요
+'''
+
+def square(x):
+    return x**3
+
+numbers = [2,4,6,8,10]
+
+print(list(map(square, numbers)))
+
+# 실습4. 함수 만들기 (배수 개수 구하기기)
+
+# Ver.1
+def multiple1(x,y): # x는 기본값, y는 최대 범위
+    list1 = []
+    a = 0
+    while a < y:
+        a += x
+        list1.append(a)
+    print(" ".join(map(str,list1)))
+    print(f"{x}의 배수의 개수: {len(list1)}")
+
+
+# Ver.2 중첩 함수.
+def multiple2(num):
+
+    def check(x):
+        return x % num == 0
+
+    lists = filter(check, range(1,31))
+    return (lists, len(lists))
+
+# max / min 에 대한 함수 로직 작성
+# 매개변수 2개 or 매개변수 n개
+
+# max 함수 로직 작성
+
+def my_max(*args):
+    return sorted(args)[-1]
+
+# min 함수 로직 작성
+
+def my_min(*args):
+    return sorted(args)[0]
+
+# 함수에 대한 시간적 성능 측정 함수
+
+import time
+
+def time_performance(function):
+    start = time.time()
+    function
+    end = time.time()
+    print(f"{end-start:.10f}")
+
+# 재귀함수
+
+# 실습5. 피보나치 수열 만들기
+
+def fibonacci(num):
+    if num != 0 and num != 1:
+        return fibonacci(num-1) + fibonacci(num-2)
+    else:
+        return num
+
+print(fibonacci(6))

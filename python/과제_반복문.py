@@ -22,28 +22,6 @@
 # 기능5. 음료수 제거
 
 ## 함수 정의
-def check_machine(): # 남은 음료수를 확인할 수 있는 함수
-    print("남은 음료수: ", vending_machine)
-
-def is_drink(): # 음료수가 남았는 지 확인하는 함수
-    if len(vending_machine) == 0:
-        print("남은 음료수가 없습니다.")
-    else:
-        print("남은 음료수: ", vending_machine)
-
-def add_drink():
-    a = input("추가할 음료수는?: ")
-    return vending_machine.append(a)
-
-vending_machine = ['게토레이','게토레이','레쓰비','레쓰비','생수','생수','생수','이프로']
-set_vending_machine = set(vending_machine)
-
-# 역할 나누기
-# 주인이 할 수 있는 것 기능 2~5
-# 소비자가 할 수 있는 것 1~3
-
-import itertools
-
 # 함수 정의
 def check_machine(): # 남은 음료수를 확인할 수 있는 함수
     print("남은 음료수: ", vending_machine)
@@ -105,7 +83,8 @@ while True:
                     continue
                 else:
                     print("자판기 프로그램을 종료합니다.")
-                    break        
+                    break
+        break
         if roll in list(rolls.keys())[1]: # 주인
             while True:
                 func = input('''1. 남은 음료수 확인
@@ -141,11 +120,11 @@ while True:
                     continue
                 else:
                     print("자판기 프로그램을 종료합니다.")
-                    break  
+                    break
+        break
     else:
         print("숫자나 값을 입력해주세요.")
         continue
-
 
 # 멘토님 사용자 정의 함수
 
