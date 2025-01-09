@@ -41,6 +41,30 @@ set_vending_machine = set(vending_machine)
 # 역할 나누기
 # 주인이 할 수 있는 것 기능 2~5
 # 소비자가 할 수 있는 것 1~3
+
+import itertools
+
+# 함수 정의
+def check_machine(): # 남은 음료수를 확인할 수 있는 함수
+    print("남은 음료수: ", vending_machine)
+
+def is_drink(): # 음료수가 남았는 지 확인하는 함수
+    if len(vending_machine) == 0:
+        print("남은 음료수가 없습니다.")
+    else:
+        print("남은 음료수: ", vending_machine)
+
+def add_drink():
+    a = input("추가할 음료수는?: ")
+    vending_machine.append(a)
+    return vending_machine.sort()
+
+vending_machine = ['게토레이','게토레이','레쓰비','레쓰비','생수','생수','생수','이프로']
+set_vending_machine = set(vending_machine)
+
+# 역할 나누기
+# 주인이 할 수 있는 것 기능 2~5
+# 소비자가 할 수 있는 것 1~3
 import itertools
 
 rolls = {("1","소비자"):1,("2","주인"):2}
@@ -63,40 +87,25 @@ while True:
                             print(f"{what_drink} 드릴게요.")
                             vending_machine.remove(what_drink)
                             check_machine()
-                            ans = input("자판기를 계속 사용하시겠습니까?(y/n): ")
-                            if ans == "y":
-                                continue
-                            else:
-                                break
                         else:
                             print(f"{what_drink}가 없습니다.")
-                            ans = input("자판기를 계속 사용하시겠습니까?(y/n): ")
-                            if ans == "y":
-                                continue
-                            else:
-                                break
                     if func == "2":
                         if len(vending_machine) == 0:
                             print(f"{what_drink}가 없습니다.")
-                            ans = input("자판기를 계속 사용하시겠습니까?(y/n): ")
-                            if ans == "y":
-                                continue
-                            else:
-                                break
                         else:
                             check_machine()
-                            ans = input("자판기를 계속 사용하시겠습니까?(y/n): ")
-                            if ans == "y":
-                                continue
-                            else:
-                                break
                     if func == "3":
                         print("자판기 프로그램을 종료합니다.")
                         break
                 else:
                     print("다시 입력해주세요")
                     continue
-            break          
+                ans = input("자판기를 계속 사용하시겠습니까?(y/n): ")
+                if ans == "y":
+                    continue
+                else:
+                    print("자판기 프로그램을 종료합니다.")
+                    break        
         if roll in list(rolls.keys())[1]: # 주인
             while True:
                 func = input('''1. 남은 음료수 확인
@@ -108,27 +117,11 @@ while True:
                     if func == "1":
                         if len(vending_machine) == 0:
                             print(f"{what_drink}가 없습니다.")
-                            ans = input("자판기를 계속 사용하시겠습니까?(y/n): ")
-                            if ans == "y":
-                                continue
-                            else:
-                                break
                         else:
                             check_machine()
-                            ans = input("자판기를 계속 사용하시겠습니까?(y/n): ")
-                            if ans == "y":
-                                continue
-                            else:
-                                break
                     if func == "2":
-                        vending_machine.append(input("추가할 음료수? "))
-                        print("추가 완료")
+                        add_drink()
                         check_machine()
-                        ans = input("자판기를 계속 사용하시겠습니까?(y/n): ")
-                        if ans == "y":
-                            continue
-                        else:
-                            break
                     if func == "3":
                         try:
                             vending_machine.remove(input("제거할 음료수? "))
@@ -137,20 +130,38 @@ while True:
                         except:
                             print("해당 음료수가 자판기에 없습니다.")
                             check_machine()
-                        ans = input("자판기를 계속 사용하시겠습니까?(y/n): ")
-                        if ans == "y":
-                            continue
-                        else:
-                            break
-                        break
                     if func == "4":
                         print("자판기 프로그램을 종료합니다.")
                         break
                 else:
                     print("다시 입력해주세요")
+                    continue    
+                ans = input("자판기를 계속 사용하시겠습니까?(y/n): ")
+                if ans == "y":
                     continue
-            break      
-        
+                else:
+                    print("자판기 프로그램을 종료합니다.")
+                    break  
     else:
         print("숫자나 값을 입력해주세요.")
         continue
+
+
+# 멘토님 사용자 정의 함수
+
+def check_machine():
+    print("남은 음료수: ", vending_machine)
+    
+def is_drink(drink):
+    return drink in vending_machine
+
+def add_drink(drink):
+    vending_machine.append(drink)
+    print(f"{drink} 추가 완료")
+
+def remove_drink(drink):
+    if is_drink(drink):
+        vending_machine.remove(drink)
+        print(f"{drink} 드릴게여")
+    else:
+        print("음료가 없습니다")
