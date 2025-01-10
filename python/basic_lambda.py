@@ -8,6 +8,10 @@ square = lambda x: x**2
 
 
 # 실습6. 함수 종합 프로그래밍
+# 아래 코드는 좋지 않음.
+# 본래 의도. 도시별 데이터를 따로 뽑아 도시에 대한 데이터를 바로 제시
+# 그러나 기존 리스트에서 도시 데이터를 반복문 돌린 것과 다르지 않게 코드를 짬
+# 차라리 도시를 key로 하고 데이터 종류별로 따로 저장하는 것이 나을 듯.
 
 weather_data = [ # 날짜, 지역, 온도, 강수량 순
     ["2024-11-20", "서울", 15.2,0.0],
@@ -82,6 +86,7 @@ while True:
     if func == 4:
         add_data(data)
         add_data(weather_data)
+        continue
     if func == 6:
         print("프로그램을 종료합니다")
         break
@@ -89,9 +94,21 @@ while True:
     city_info(data)
     if func == 1:
         city_temp(city_dict,city)
+        continue
     if func == 2:
         max_min_temp(city_dict,city)
+        continue
     if func == 3:
         rainfall(city_dict,city)
+        continue
     if func == 5:
-        full_data(weather_data)
+        full_data(weather_data) 
+        continue
+
+
+# 강사님 실습 코드
+
+# 평균 기온
+def avg_temperature():
+    temp = filter (lambda x: x[1] == city, weather_data)
+    temperatures = list(map(lambda x: x[2], temp))
