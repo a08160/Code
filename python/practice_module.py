@@ -19,3 +19,4 @@ class Calculator:
 
     def square(self,a):
         return(a**2)
+        

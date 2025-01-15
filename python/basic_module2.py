@@ -41,3 +41,51 @@ json_obj = json.loads(json_str) # json 문자열을 python 객체로 변환
 
 
 # 서드파트 모듈: 표준 모듈이 아닌 외부 개발자에 의해 개발된 모듈
+
+
+# 실습. 타자연습 게임
+# 영어 타자 연습 프로그램
+
+import random, string, time, statistics
+
+def generate_random_word(length):
+    # 랜덤 영어 단어 생성
+    word = ''.join(random.choices(string.ascii_letters, k=length))
+    return word
+
+while True:
+    num = int(input("몇 개의 단어로 하시겠습니까? "))
+    print("3초 뒤에 게임이 시작됩니다.")
+    time.sleep(3)
+    print("===== 게임 시작 =====")
+    
+    total_time = []
+    
+    for i in range(num):
+        length = random.randint(5,10)
+        word = generate_random_word(length)
+        print(f"입력: {word}")
+        start_time = time.perf_counter()
+        while True:
+            answer = input("입력: ")
+            if answer == word:
+                print("통과!\n")
+                break
+            if answer != word:
+                print("오타! 다시 시도하세요.\n")
+                continue
+        end_time = time.perf_counter()
+
+        total_time.append(end_time - start_time)
+    
+    
+    print("===== 게임 종료 =====")
+    print(f"총 {num}개의 단어를 입력하셨습니다.")
+    print(f"총 걸린 시간: {sum(total_time):.2f}초")
+    print(f"평균 단어당 입력 시간: {statistics.mean(total_time):.2f}초\n")
+
+    retry = input("다시 하시겠습니까?(Y/N) ")
+    if retry == "Y":
+        continue
+    else:
+        break
