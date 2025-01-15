@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<!-- head에 style 만들기 -->
+<!-- 우선 순위: id>class>tag -->
+    <style>
+        *{
+            color: red;
+        }
+         li {
+            color: blue;
+         }
+         .orange{  /*클래스 속성 편집 시 .클래스*/
+            color:orange;
+
+         .blue{  /*클래스 속성 편집 시 .클래스*/
+            color:blue;
+        
+         #orange{
+            color: red; /*id 속성 편집 시 #id , */
+         }
+         }
+
+         span.orange {
+            color:orange;
+         }
+
+         ul > .orange {
+            color: purple;
+         }
+
+         div .orange {
+            color: indigo
+         }
+         /* orange 다음 형제를 선택 */
+        .orange + li{
+            color: orchid
+        }
+        /* 전체 형제를 선택 */
+        .orange ~ li{
+            color:azure
+        }
+    </style>
+<body>
+    <div>
+        <ul>
+            <!-- 아래 리스트 끼리는 형제 -->
+            <li>사과</li>
+            <li>딸기</li>
+            <!-- id 와 class 의 차이: id는 단 하나만 지정 가능 -->
+            <li id="orange" class="orange blue">오렌지</li>
+            <li>망고</li>
+            <li>포도</li>
+        </ul>
+        <div>당근</div>
+        <p>토마토</p>
+        <span class="orange">오렌지</span>
+    </div>
+</body>
+</html>
