@@ -1,0 +1,111 @@
+<!-- ! 누르면 자동 생성
+viewport : 모바일에서도 확인 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div> 안녕하세요 </div>
+    <h1> 제목1 </h1>
+    <h2> 제목2 </h2>
+    <h3> 제목3 </h3>
+    <h4> 제목4 </h4>
+    <h5> 제목5 </h5>
+    <h6> 제목6 </h6>
+    <p> 장문의 글을 적을 때 사용 </p>
+
+    <ul type = "square">
+        <li>사과</li>
+        <li>오렌지</li>
+        <li>바나나</li>
+    </ul>
+
+    <ol type = "I", start = "3",  reversed>
+        <li>사과</li>
+        <li>오렌지</li>
+        <li>바나나</li>
+    </ol>
+    
+    <hr> <!--수평 줄 태그-->
+
+    <div> <!--문자열 꾸미기-->
+        <b> 볼드체 </b>
+        <strong> 볼드체 </strong>
+        <i> 이탤릭체 </i>
+        <em> 이탤릭체 </em>
+
+        <br>
+        <del> 가운데 줄 </del>
+        <u> 밑줄 </u>
+        <br>
+        <a href="https://naver.com" target ="_blank"> 네이버로 이동 </a> <!--anchor 태그: 하이퍼링크 생성
+        target = "_blank" 새로운 탭 생성하여 링크로 이동-->
+        <a href="https://google.com"> 구글로 이동 </a>
+    </div>
+    
+    <div>
+        <spans>빨강색</spans>
+        <spans>주황색</spans>
+        <spans>노랑색색</spans>
+    </div>
+
+    <div>
+        <img src="" alt="" width = "200px"> <!--src=이미지 경로, alt=이미지가 안 떴을 경우 메세지지-->
+    </div>
+    <div>
+        <!-- placeholder: 예시 보여줌, value = 기본값 -->
+        <input type="text", placeholder="입력하세요" value="안녕"><br>
+        <input type ="password"><br>
+        <input type = "button" value="클릭하세요"><br>
+        <input type ="checkbox" name = "check">1
+        <input type ="checkbox" name = "check">2
+        <input type ="checkbox" name = "check">3
+        <input type ="checkbox" name = "check">4
+        <input type ="checkbox" name = "check">5 <br>
+        <!-- radio: 같은 name 인 애들 중 하나만 선택 -->
+        <input type ="radio" name = "radio">a
+        <input type ="radio" name = "radio">b
+        <input type ="radio" name = "radio">c
+        <input type ="radio" name = "radio">d
+        <input type = "date">
+        <input type="time">
+    </div>
+    <div>
+        <button type="submit"> 검색하세요 </button>
+    </div>
+    
+</body>
+    <div>
+        <select>
+            <option value = "korea">대한민국</option>
+            <option value = "America">미국</option>
+            <option value = "China">중국</option>
+        </select>
+    </div>
+    <div>
+        <table border = "1">
+            <tHead>
+                <tr>
+                    <th>제목</th>
+                    <th>이름</th>
+                    <th>나이</th>
+                </tr>
+            </tHead>
+            <tbody>
+                <tr>
+                    <td>파이썬</td>
+                    <td>홍길동</td>
+                    <td>20</td>
+                </tr>
+                <tr>
+                    <td>자바스크립트</td>
+                    <td>성춘향</td>
+                    <td>21</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</html>
