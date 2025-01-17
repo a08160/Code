@@ -55,6 +55,7 @@ from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
+
 service = Service()
 driver = webdriver.Chrome(service = service)
 driver.get("https://naver.com")
