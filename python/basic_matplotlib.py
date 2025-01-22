@@ -8,7 +8,7 @@ import matplotlib.pyplot as plt
 # plt.rc('font', family = font)
 
 # Matplotlib 데이터 시각화
-'''
+
 x = list(range(1,6))
 y = list(range(5,10))
 
@@ -223,8 +223,8 @@ explode = [0,0.1,0,0]  # 데이터 강조
 plt.pie(sizes, labels=labels, explode = explode, autopct = "%1.1f%%", shadow = True, startangle= 140)
 
 plt.show()
-'''
-'''
+
+
 # 도넛 차트: wedgeporps의 width를 조절
 
 # 실습1. 꺾은선 그래프
@@ -246,9 +246,9 @@ plt.ylabel("Sales")
 plt.tight_layout()
 plt.show()
 
-'''
 
-'''
+
+
 # 실습2. 막대 그래프
 import matplotlib.pyplot as plt
 
@@ -277,7 +277,7 @@ plt.grid(True,color="lightgrey",linewidth = "0.6")
 plt.tight_layout()
 plt.show()
 
-'''
+
 # 실습3. 파이 차트
 import matplotlib.pyplot as plt
 
