@@ -1,5 +1,5 @@
 # Matplotlib 데이터 시각화
-
+'''
 import matplotlib.pyplot as plt
 # from matplotlib import font_manager
 
@@ -276,7 +276,7 @@ plt.grid(True,color="lightgrey",linewidth = "0.6")
 
 plt.tight_layout()
 plt.show()
-
+'''
 
 # 실습3. 파이 차트
 import matplotlib.pyplot as plt
@@ -285,6 +285,8 @@ sizes = [ 32,16,18,34]
 fruits = ["Banana","Melon","Grapes","Apple"]
 emphasize =[0.1,0,0.1,0]
 colors = ["yellow","g","purple","r"]
+
+# 딕셔너리로 조절하는 게 좋을 듯?
 
 plt.pie(
     sizes,
