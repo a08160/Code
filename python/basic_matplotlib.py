@@ -1,5 +1,5 @@
 # Matplotlib 데이터 시각화
-'''
+
 import matplotlib.pyplot as plt
 # from matplotlib import font_manager
 
@@ -16,7 +16,7 @@ plt.plot(x,y, color = "red", linestyle="--", linewidth = 1, label = "Graph")
 plt.legend(loc="upper center", fontsize = 15, title = "Contents", frameon= False)
 
 # 마커 생성
-plt.plot(x,y, marker = "*", markersize =30, markerfacecolor="white", markeredgecolor = "red")
+plt.plot(x,y, marker = "o", markersize =30, markerfacecolor="white", markeredgecolor = "red")
 plt.title("Matplotlib", fontsize = 20, pad=20, backgroundcolor = "red", color="blue")
 
 plt.xlabel("X-axis")
@@ -276,12 +276,12 @@ plt.grid(True,color="lightgrey",linewidth = "0.6")
 
 plt.tight_layout()
 plt.show()
-'''
+
 
 # 실습3. 파이 차트
 import matplotlib.pyplot as plt
 
-sizes = [ 32,16,18,34]
+sizes = [32,16,18,34]
 fruits = ["Banana","Melon","Grapes","Apple"]
 emphasize =[0.1,0,0.1,0]
 colors = ["yellow","g","purple","r"]
@@ -297,5 +297,8 @@ plt.pie(
     colors= colors,
     wedgeprops= {'linewidth':1, 'edgecolor' : "black", "width":0.75})
 
+# counterclock 데이터의 반영 방향을 반대로(기본. 반시계 방향)
+
 plt.tight_layout()
 plt.show()
+
