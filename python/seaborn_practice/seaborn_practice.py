@@ -131,3 +131,5 @@ plt.xlabel("Age")
 plt.ylabel("Density")
 
 plt.show()
+
+# Pivot Method 데이터의 재구조화 pivot(index,column,value)
