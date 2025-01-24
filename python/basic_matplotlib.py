@@ -119,7 +119,6 @@ plt.bar(
 )
 
 bars = plt.bar(categories, values, color="orange", label="Bar Graph")
-plt.xticks(categories, ["2023", "2024", "2025"])
 
 # 바그래프별 텍스트 넣기
 for bar in bars:

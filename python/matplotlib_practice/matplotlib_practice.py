@@ -7,8 +7,6 @@ print(df.head())
 print(df.info())
 
 age_columns = [col for col in df.columns if "세" in col]
-
-age_columns = [col for col in df.columns if "세" in col]
 print(df[age_columns].dtypes)
 
 '''
@@ -66,3 +64,5 @@ plt.grid(True, linestyle = "--",alpha=0.6)
 plt.xticks(rotation=45)
 plt.legend()
 plt.show()
+
+# 한글 폰트 적용 시 fontproperty = font 의 option을 추가해야 함
