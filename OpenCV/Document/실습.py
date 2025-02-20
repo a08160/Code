@@ -17,7 +17,7 @@ out_sharpened = cv2.VideoWriter('sharpened.avi', fourcc, fps, (frame_width, fram
 
 while True:
     ret, frame = cap.read()
-    if not ret:
+    if not ret: # ret 은 frame이 생성되었는 지의 여부를 True False 값으로 반환환
         break
 
     # 1. 그레이스케일 변환
