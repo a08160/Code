@@ -47,3 +47,13 @@ plt.figure(figsize=(8, 8))
 plt.imshow(image_rgb)
 plt.axis("off")
 plt.show()
+
+
+
+# 리더님 코드
+
+image = cv2.imread("practice_1.jpg")
+gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
+
+# 블러
+blur = cv2.GaussianBlur(gray, (5,5), 0)
